@@ -46,3 +46,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Added at 2019-03-09 19:38:17 -0400 by desktop-d449p1p\horiz:
+gem "webpacker", "~> 4.0"
+
+# Added at 2019-03-09 20:34:02 -0400 by desktop-d449p1p\horiz:
+gem "sidekiq", "~> 5.2"
+
+# Added at 2019-03-09 21:17:21 -0400 by desktop-d449p1p\horiz:
+gem "rufus-scheduler", "~> 3.5"

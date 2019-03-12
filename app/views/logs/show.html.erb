@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Path:</strong>
+  <%= @log.path %>
+  <div data-controller="log">
+    <input data-target="log.logId" hidden value="<%= @log.id %>" />
+    <pre data-target="log.log">
+      <%= @initial_log %>
+    </pre>
+  </div>
+
+</p>
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>

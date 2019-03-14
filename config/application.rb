@@ -29,5 +29,21 @@ module Manager
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.after_initialize do
+      if defined?(Rails::Server)
+        Thread.new do
+          App.all.each do |app|
+            File.open(app.log_path) do |f|
+              f.extend File::Tail
+              f.backward 10
+              f.tail do |line|
+                LogChannel.broadcast_to app, line
+              end
+            end
+          end
+        end
+      end
+    end
   end
 end

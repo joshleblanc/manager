@@ -2,14 +2,12 @@ import { Controller } from 'stimulus';
 import consumer from '../consumer';
 
 export default class extends Controller {
-    static targets = [ 'logId', 'log' ];
+    static targets = [ 'appId', 'log' ];
 
     connect() {
-        console.log(this.logIdTarget.value);
-        console.log(this.logTarget);
         consumer.subscriptions.create({
             channel: 'LogChannel',
-            wtf: this.logIdTarget.value
+            id: this.appIdTarget.value
         }, {
             received: (data) => {
                 const currentText = this.logTarget.innerHTML;

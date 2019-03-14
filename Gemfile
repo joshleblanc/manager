@@ -55,3 +55,5 @@ gem "sidekiq", "~> 5.2"
 
 # Added at 2019-03-09 21:17:21 -0400 by desktop-d449p1p\horiz:
 gem "rufus-scheduler", "~> 3.5"
+
+gem "file-tail", "~> 1.2"

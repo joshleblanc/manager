@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @app.name %>
+  <div data-controller="log">
+    <input data-target="log.appId" hidden value="<%= @app.id %>" />
+    <pre data-target="log.log">
+      <%= @app.initial_log %>
+    </pre>
+  </div>
+</p>
+
+<div data-controller="app" data-app-update-path="<%= update_app_path(@app) %>">
+  <%= button_tag "Update", class: "btn btn-primary", "data-action": "click->app#updateApp" %>
+</div>
+
+<%= link_to 'Edit', edit_app_path(@app) %> |
+<%= link_to 'Back', apps_path %>

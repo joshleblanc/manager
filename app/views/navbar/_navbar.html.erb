@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to "Manager", {}, href: "#", class: "navbar-brand" %>
+  <%= button_tag class: "navbar-toggler", "data-toggle": "collapse", "data-target": "#navbarContent" do %>
+    <span class="navbar-toggler-icon"></span>
+  <% end %>
+
+  <div class="collapse navbar-collapse" id="navbarContent">
+    <ul class="navbar-nav mr-auto">
+      <%= nav_item "Apps", apps_path %>
+    </ul>
+  </div>
+
+</nav>

@@ -10,13 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_09_233051) do
+ActiveRecord::Schema.define(version: 2019_03_13_204237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "logs", force: :cascade do |t|
-    t.string "path"
+  create_table "apps", force: :cascade do |t|
+    t.string "name"
+    t.string "log_path"
+    t.string "app_path"
+    t.string "restart_command"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

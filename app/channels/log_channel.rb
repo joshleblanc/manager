@@ -1,7 +1,7 @@
 class LogChannel < ApplicationCable::Channel
   def subscribed
     p params
-    @log = Log.find(params[:wtf])
+    @log = App.find(params[:id])
     stream_for @log
   end
 

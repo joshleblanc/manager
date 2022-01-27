@@ -51,7 +51,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "webpacker", "~> 4.0"
 
 # Added at 2019-03-09 20:34:02 -0400 by desktop-d449p1p\horiz:
-gem "sidekiq", "~> 5.2"
+gem "sidekiq", "~> 6.4"
 
 # Added at 2019-03-09 21:17:21 -0400 by desktop-d449p1p\horiz:
 gem "rufus-scheduler", "~> 3.5"
